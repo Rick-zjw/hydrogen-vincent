@@ -8,18 +8,18 @@ import {
   PredictiveSearchForm,
   PredictiveSearchResults,
 } from '~/components/Search';
-import { HeaderBannder } from "../components/Header-banner"
+import { HeaderBanner } from "../components/Header-banner"
 /**
  * @param {LayoutProps}
  */
 export function Layout({ cart, children = null, footer, header, isLoggedIn }) {
   return (
     <>
-      <HeaderBannder />
-      <div>header swiper</div>
+
       <CartAside cart={cart} />
       <SearchAside />
       <MobileMenuAside menu={header?.menu} shop={header?.shop} />
+      <HeaderBanner />
       {header && <Header header={header} cart={cart} isLoggedIn={isLoggedIn} />}
       <main>{children}</main>
       <Suspense>
